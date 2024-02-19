@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Chivo';
+  src: url('../assets/fonts/Chivo-Light.ttf');
+}
+
+:root {
+  --font-family: 'Chivo', sans-serif;
+  --font-size-body: 1.125rem;
+  --font-size-titel: 3.25rem;
+  --font-line-body: 1.75rem;
+  --font-line-titel: 3.875rem;
+
+  --color-primary: #54e6af;
+  --color-secondery: #2c344b;
+  --color-primary-hover: #b3ffe2;
+  --color-background: #121725;
+  --color-font-light: #ffffff;
+  --color-font-middle: #c2cbe5;
+  --color-icons: #5a668a;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-body);
+  line-height: var(--font-line-body);
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-font-middle);
+}
