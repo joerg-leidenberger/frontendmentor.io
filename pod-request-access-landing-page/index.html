@@ -7,5 +7,61 @@
     <link rel="icon" href="./assets/images/favicon-32x32.png" />
     <title>Landing Page</title>
   </head>
-  <body></body>
+  <body>
+    <header><img src="./assets/images/logo.svg" alt="" /></header>
+    <main>
+      <h1><span class="first-line">PUBLISH YOUR PODCASTS</span> EVERYWHERE.</h1>
+      <p>
+        Upload your audio to Pod with a single click. We’ll then distribute your
+        podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and
+        more!
+      </p>
+      <section aria-label="External links to podcasts" class="links-podcasts">
+        <ul>
+          <li>
+            <a href="/#"
+              ><img src="./assets/images/spotify.svg" alt="Link to Spotify"
+            /></a>
+          </li>
+          <li>
+            <a href="/#"
+              ><img
+                src="./assets/images/apple-podcast.svg"
+                alt="Link to Apple Podcast"
+            /></a>
+          </li>
+          <li class="google-podcasts">
+            <a href="/#"
+              ><img
+                src="./assets/images/google-podcasts.svg"
+                alt="Link to Google Podcasts"
+            /></a>
+          </li>
+          <li>
+            <a href="/#"
+              ><img
+                src="./assets/images/pocket-casts.svg"
+                alt="Link to Pocket Casts"
+            /></a>
+          </li>
+        </ul>
+      </section>
+      <form action="#" id="emailForm" novalidate>
+        <div class="validation-error">Oops! Please check your email</div>
+        <label for="email"></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Email address"
+          autocomplete="email"
+        />
+        <button type="submit">Request Access</button>
+      </form>
+    </main>
+    <div class="background-image"></div>
+    <div class="decoration"></div>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
