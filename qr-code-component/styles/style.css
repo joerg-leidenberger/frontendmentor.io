@@ -24,21 +24,21 @@
   --dark-blue: hsl(218, 44%, 22%);
 }
 
-html {
-  font-size: var(--font-size);
-  box-sizing: border-box;
-}
-
 *,
-*:before,
-*:after {
-  box-sizing: inherit;
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
 }
 
+html {
+  font-size: var(--font-size);
+}
+
 body {
-  height: 100vh;
+  min-height: 100vh;
   font-family: var(--font-family);
+  padding: 1rem;
   background-color: var(--light-gray);
 }
 
@@ -62,7 +62,7 @@ p {
 }
 
 .card {
-  width: 20rem;
+  max-width: 20rem;
   padding: 1rem;
   background-color: var(--white);
   border-radius: 1.25rem;
@@ -78,7 +78,9 @@ p {
     overflow: hidden;
 
     & .qr-code {
-      z-index: 10;
+      z-index: 1;
+      display: block;
+      max-width: 100%;
     }
 
     & .overlay {
@@ -99,6 +101,34 @@ p {
       left: 40%;
     }
   }
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.qr-code-container::before,
+.qr-code-container::after {
+  z-index: 0;
+  content: '';
+  position: absolute;
+  width: 20.5rem;
+  height: 20.5rem;
+  background-color: var(--blue-shade);
+  border-radius: 50%;
+}
+
+.qr-code-container::before {
+  top: -50%;
+  left: -50%;
+}
+
+.qr-code-container::after {
+  top: 70%;
+  left: 40%;
 }
 
 @media screen and (min-width: 1024px) {
