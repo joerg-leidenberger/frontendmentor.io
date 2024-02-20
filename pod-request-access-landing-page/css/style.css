@@ -272,7 +272,7 @@ form {
 
   main {
     max-width: 55.5rem;
-    padding: 5.8125rem 0 0 10.3125rem;
+    padding: 5.5rem 0 0 10.3125rem;
 
     & h1 {
       font-size: var(--font-size-titel);
